@@ -1,0 +1,21 @@
+lib: [
+  "_build/install/default/lib/frama-c-pcge/META"
+  "_build/install/default/lib/frama-c-pcge/core/Pcge.a" {"core/Pcge.a"}
+  "_build/install/default/lib/frama-c-pcge/core/Pcge.cma" {"core/Pcge.cma"}
+  "_build/install/default/lib/frama-c-pcge/core/Pcge.cmxa" {"core/Pcge.cmxa"}
+  "_build/install/default/lib/frama-c-pcge/core/pcge.cmi" {"core/pcge.cmi"}
+  "_build/install/default/lib/frama-c-pcge/core/pcge.cmt" {"core/pcge.cmt"}
+  "_build/install/default/lib/frama-c-pcge/core/pcge.cmx" {"core/pcge.cmx"}
+  "_build/install/default/lib/frama-c-pcge/core/pcge.ml" {"core/pcge.ml"}
+  "_build/install/default/lib/frama-c-pcge/core/pcge__Plug.cmi" {"core/pcge__Plug.cmi"}
+  "_build/install/default/lib/frama-c-pcge/core/pcge__Plug.cmt" {"core/pcge__Plug.cmt"}
+  "_build/install/default/lib/frama-c-pcge/core/pcge__Plug.cmx" {"core/pcge__Plug.cmx"}
+  "_build/install/default/lib/frama-c-pcge/core/plug.ml" {"core/plug.ml"}
+  "_build/install/default/lib/frama-c-pcge/dune-package"
+]
+lib_root: [
+  "_build/install/default/lib/frama-c/plugins/pcge/META" {"frama-c/plugins/pcge/META"}
+]
+libexec: [
+  "_build/install/default/lib/frama-c-pcge/core/Pcge.cmxs" {"core/Pcge.cmxs"}
+]

@@ -1,0 +1,24 @@
+lib: [
+  "_build/install/default/lib/frama-c-hello/META"
+  "_build/install/default/lib/frama-c-hello/core/Hello.a" {"core/Hello.a"}
+  "_build/install/default/lib/frama-c-hello/core/Hello.cma" {"core/Hello.cma"}
+  "_build/install/default/lib/frama-c-hello/core/Hello.cmxa" {"core/Hello.cmxa"}
+  "_build/install/default/lib/frama-c-hello/core/gcs_in_func.ml" {"core/gcs_in_func.ml"}
+  "_build/install/default/lib/frama-c-hello/core/hello.cmi" {"core/hello.cmi"}
+  "_build/install/default/lib/frama-c-hello/core/hello.cmt" {"core/hello.cmt"}
+  "_build/install/default/lib/frama-c-hello/core/hello.cmx" {"core/hello.cmx"}
+  "_build/install/default/lib/frama-c-hello/core/hello.ml" {"core/hello.ml"}
+  "_build/install/default/lib/frama-c-hello/core/hello__Gcs_in_func.cmi" {"core/hello__Gcs_in_func.cmi"}
+  "_build/install/default/lib/frama-c-hello/core/hello__Gcs_in_func.cmt" {"core/hello__Gcs_in_func.cmt"}
+  "_build/install/default/lib/frama-c-hello/core/hello__Gcs_in_func.cmx" {"core/hello__Gcs_in_func.cmx"}
+  "_build/install/default/lib/frama-c-hello/dune-package"
+]
+lib_root: [
+  "_build/install/default/lib/frama-c/plugins/hello/META" {"frama-c/plugins/hello/META"}
+]
+libexec: [
+  "_build/install/default/lib/frama-c-hello/core/Hello.cmxs" {"core/Hello.cmxs"}
+]
+doc: [
+  "_build/install/default/doc/frama-c-hello/README.md"
+]

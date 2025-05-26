@@ -1,0 +1,48 @@
+You are an expert in program analysis and static code instrumentation. Your task is to carefully analyze the provided function and extract all guarding conditions step-by-step as a human expert would.
+
+Provided Context:
+- Analyzed Function:  
+  {analyzed_function}
+- Caller Function Name: {caller_function_name}
+- Callee Function Name: {callee_function_name}
+- Start Line of Function in Source File: {start_line}
+
+---
+
+Task:
+1. Carefully review the function and locate the invocation of the callee function.
+2. Trace all paths leading to the invocation of `{callee_function_name}` in the code.
+3. Identify any **guarding conditions** along these paths.
+   - **Guarding Conditions Definition:**  
+     Guarding conditions are checks or constraints in the code that must be satisfied for execution to reach the callee function. These conditions are typically found in `if` statements, loops, or other conditional constructs directly affecting the execution flow to the callee.
+
+4. For each guarding condition:
+   - Include the condition's exact line number (relative to the provided start line).
+   - Indicate whether execution must enter or avoid the condition branch using the `flag` field.
+
+5. You can turn to Example for reference.
+---
+
+Expected Output Format:
+[
+    @
+        "condition": "<Condition>",
+        "line_number": <Line Number>,
+        "flag": <True/False>
+    @,
+    ...
+]
+
+Example:
+{example}
+
+---
+
+Important Notes:
+1. Only include conditions directly related to the execution paths reaching the callee function.
+2. Exclude any conditions NOT related to the execution path (e.g., post-conditions or conditions affecting other code branches). (Very Important)
+3. For cases where no guarding conditions exist, return:
+   "guarding_conditions": "NULL"
+4. Think step-by-step as provided in Task: trace the flow of execution as if you are debugging the function as an expert.
+5. Do NOT provide any explanations or reasoning in your response. Only output the results in the required format.
+6. Follow the specified format strictly. All valid conditions must be included without alteration.

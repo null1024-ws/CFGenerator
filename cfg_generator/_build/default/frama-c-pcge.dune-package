@@ -1,0 +1,44 @@
+(lang dune 3.16)
+(name frama-c-pcge)
+(sections (lib .) (lib_root ..) (libexec .))
+(files
+ (lib
+  (META
+   core/Pcge.a
+   core/Pcge.cma
+   core/Pcge.cmxa
+   core/pcge.cmi
+   core/pcge.cmt
+   core/pcge.cmx
+   core/pcge.ml
+   core/pcge__Plug.cmi
+   core/pcge__Plug.cmt
+   core/pcge__Plug.cmx
+   core/plug.ml
+   dune-package))
+ (lib_root (frama-c/plugins/pcge/META))
+ (libexec (core/Pcge.cmxs)))
+(library
+ (name frama-c-pcge.core)
+ (kind normal)
+ (archives (byte core/Pcge.cma) (native core/Pcge.cmxa))
+ (plugins (byte core/Pcge.cma) (native core/Pcge.cmxs))
+ (native_archives core/Pcge.a)
+ (requires frama-c.kernel)
+ (main_module_name Pcge)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name pcge)
+     (visibility public)
+     (kind alias)
+     (source (path Pcge) (impl (path core/pcge.ml-gen))))
+    (name Pcge)
+    (modules
+     (module
+      (obj_name pcge__Plug)
+      (visibility public)
+      (source (path Plug) (impl (path core/plug.ml))))))
+   (wrapped true))))

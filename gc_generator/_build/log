@@ -1,0 +1,16 @@
+# dune exec -- frama-c ../benchmark/DAFL_benchmark/libxml2-2.9.4/libxml2-2.9.4/valid.c -file valid.c -function xmlDumpElementDecl -start 1665 -end 1714 -main xmlDumpElementDecl -cpp-command 'gcc -E -C -I. -I/home/shen/static_analysis/benchmark/DAFL_benchmark/libxml2-2.9.4/libxml2-2.9.4/include/'
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /home/shen/.cache/dune/db
+# Workspace root: /home/shen/static_analysis/gc_generator
+# Auto-detected concurrency: 16
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /usr/bin/ocamlc.opt -config > /tmp/dune_b70dfa_output

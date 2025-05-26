@@ -1,0 +1,16 @@
+# dune exec -- frama-c -debug 3 ../benchmark/magma_benchmark/libpng/repo/example.c ../benchmark/magma_benchmark/libpng/repo/libpng_read_fuzzer.c ../benchmark/magma_benchmark/libpng/repo/png.c ../benchmark/magma_benchmark/libpng/repo/pngerror.c ../benchmark/magma_benchmark/libpng/repo/pngget.c ../benchmark/magma_benchmark/libpng/repo/pngmem.c ../benchmark/magma_benchmark/libpng/repo/pngpread.c ../benchmark/magma_benchmark/libpng/repo/pngread.c ../benchmark/magma_benchmark/libpng/repo/pngrio.c ../benchmark/magma_benchmark/libpng/repo/pngrtran.c ../benchmark/magma_benchmark/libpng/repo/pngrutil.c ../benchmark/magma_benchmark/libpng/repo/pngset.c ../benchmark/magma_benchmark/libpng/repo/pngtest.c ../benchmark/magma_benchmark/libpng/repo/pngtrans.c ../benchmark/magma_benchmark/libpng/repo/pngwio.c ../benchmark/magma_benchmark/libpng/repo/pngwrite.c ../benchmark/magma_benchmark/libpng/repo/pngwtran.c ../benchmark/magma_benchmark/libpng/repo/pngwutil.c -pcg-m ../temp_dir/libpng/libpng_m.dot -pcg-f ../temp_dir/libpng/libpng_f.dot -pcg-funcinfo ../temp_dir/libpng/libpng_functions.txt -cpp-command 'gcc -E -C -I. -I/home/shen/static_analysis/benchmark/magma_benchmark/libpng/lib/'
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /home/shen/.cache/dune/db
+# Workspace root: /home/shen/static_analysis/cfg_generator
+# Auto-detected concurrency: 16
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /usr/bin/ocamlc.opt -config > /tmp/dune_718e96_output

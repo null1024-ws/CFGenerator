@@ -1,0 +1,45 @@
+(lang dune 3.16)
+(name frama-c-hello)
+(sections (lib .) (lib_root ..) (libexec .) (doc ../../doc/frama-c-hello))
+(files
+ (lib
+  (META
+   core/Hello.a
+   core/Hello.cma
+   core/Hello.cmxa
+   core/gcs_in_func.ml
+   core/hello.cmi
+   core/hello.cmt
+   core/hello.cmx
+   core/hello.ml
+   core/hello__Gcs_in_func.cmi
+   core/hello__Gcs_in_func.cmt
+   core/hello__Gcs_in_func.cmx
+   dune-package))
+ (lib_root (frama-c/plugins/hello/META))
+ (libexec (core/Hello.cmxs))
+ (doc (README.md)))
+(library
+ (name frama-c-hello.core)
+ (kind normal)
+ (archives (byte core/Hello.cma) (native core/Hello.cmxa))
+ (plugins (byte core/Hello.cma) (native core/Hello.cmxs))
+ (native_archives core/Hello.a)
+ (requires frama-c.kernel frama-c-pdg.core frama-c-pdg.types.core)
+ (main_module_name Hello)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name hello)
+     (visibility public)
+     (kind alias)
+     (source (path Hello) (impl (path core/hello.ml-gen))))
+    (name Hello)
+    (modules
+     (module
+      (obj_name hello__Gcs_in_func)
+      (visibility public)
+      (source (path Gcs_in_func) (impl (path core/gcs_in_func.ml))))))
+   (wrapped true))))

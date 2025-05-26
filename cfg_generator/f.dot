@@ -1,0 +1,12 @@
+digraph G {
+	main->process_BOOM
+subgraph cluster_37 {
+	find_BOOM;
+	process_BOOM;
+	label = "func";
+	}
+subgraph cluster_75 {
+	main;
+	label = "main";
+	}
+}

@@ -1,0 +1,9 @@
+package "core" (
+  directory = "core"
+  description = ""
+  requires = "frama-c-pdg.core frama-c-pdg.types.core frama-c.kernel"
+  archive(byte) = "Hello.cma"
+  archive(native) = "Hello.cmxa"
+  plugin(byte) = "Hello.cma"
+  plugin(native) = "Hello.cmxs"
+)
